@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  background-image: linear-gradient(to right, red, yellow);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.search-container {
+  position: relative;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.search-container input,
+.search-container .suggestions {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+  border: none;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.search-container .suggestions {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+  position: absolute;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+  left: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.has-suggestions {
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+ul li {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+ul li:hover {
+  background-color: #f0f0f0;
+}
+
+input {
+  transition: background-color 0.2s;
+}
+
+input:hover,
+input:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+}
